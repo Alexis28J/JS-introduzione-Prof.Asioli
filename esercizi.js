@@ -1920,7 +1920,111 @@ const prodotti = [
 
 
 //61) mettere in ordine l'array di prodotti per prezzo dal più costoso in giù
+
+// function comparePricesDescending(prodotto1, prodotto2){
+
+//   const prezzo1 = prodotto1.prezzo;
+//   const prezzo2 = prodotto2.prezzo;
+
+//   return prezzo2 - prezzo1;
+
+// }
+
+// function comparePricesDescending2(prodotto1, prodotto2){
+//   return prodotto2.prezzo - prodotto1.prezzo;
+// }
+
+// // prodotti.sort(comparePricesDescending);
+// // prodotti.sort(comparePricesDescending2);
+// prodotti.sort((p1, p2) => p2.prezzo - p1.prezzo);
+
+// console.log(prodotti);
+
+
 //62) mettere in ordine per nome discendente
+
+// function compareByNameDescending(prodotto1, prodotto2) {
+
+//   const nome1 = prodotto1.nome;
+//   const nome2 = prodotto2.nome;
+
+//   return nome2.localeCompare(nome1);
+// }
+
+// //prodotti.sort(compareByNameDescending);
+// prodotti.sort((p1, p2) => p2.nome.localeCompare(p1.nome));
+
+// console.log(prodotti);
+
+
 //63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
+
+// function compareCategoryAscAndWeightDesc(prod1, prod2) {
+
+//   if(prod1.categoria === prod2.categoria){
+//     return prod2.peso - prod1.peso;
+//   }
+
+//   return prod1.categoria.localeCompare(prod2.categoria);
+  
+// }
+// prodotti.sort(compareCategoryAscAndWeightDesc);
+
+// console.log(prodotti);
+
 //64) mettere in ordine per anno di scadenza dal più vicino
+
+// function compareYearsAsc(prod1, prod2) {
+
+//   const yearString1 = prod1.scadenza.slice(0,4);
+//   const yearString2 = prod2.scadenza.slice(0,4);
+
+//   const year1 = Number(yearString1);
+//   const year2 = Number(yearString2);
+
+//   return year1 - year2;
+
+// }
+
+// prodotti.sort(compareYearsAsc);
+
+// console.log(prodotti);
 //65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
+
+// function compCatDescWeightAscNameAsc(prod1, prod2){
+
+//   if (prod1.categoria === prod2.categoria) {
+
+//     if (prod1.peso === prod2.peso) {
+      
+//       return prod1.nome.localeCompare(prod2.nome);
+//     }
+    
+//     return prod1.peso - prod2.peso;
+//   }
+
+//   return prod2.categoria.localeCompare(prod1.categoria);
+// }
+
+// function compCatDescWeightAscNameAsc2(prod1, prod2){
+
+//   if (prod1.categoria !== prod2.categoria) {
+
+//     return prod2.categoria.localeCompare(prod1.categoria);
+
+//   } else if (prod1.peso !== prod2.peso){
+
+//     return prod1.peso - prod2.peso;
+
+//   } else {
+
+//     prod1.nome.localeCompare(prod2.nome);
+
+//   }
+
+  
+// }
+
+// prodotti.sort(compCatDescWeightAscNameAsc);
+
+// console.log(prodotti);

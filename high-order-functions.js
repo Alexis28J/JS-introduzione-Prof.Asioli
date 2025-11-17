@@ -284,8 +284,8 @@
 // console.log(testArray.reduce(sumFirstChar, ''));
 // console.log(testArray.reduce((acc, curr) => acc + curr[0], ''));
 
-const students = ['luis', 'alexander', 'stefania', 'eros', 'daniel', 'salma'];
-const numbers = [30, 12, 5, 111, 300, 400, 1];
+// const students = ['luis', 'alexander', 'stefania', 'eros', 'daniel', 'salma'];
+// const numbers = [30, 12, 5, 111, 300, 400, 1];
 
 //foreach
 
@@ -335,86 +335,117 @@ const numbers = [30, 12, 5, 111, 300, 400, 1];
 // console.log(students);
 
 
-function compareNumbersAscending(n1, n2){
-    // if (n1 > n2) {
-    //     return 1;
-    // } else if(n2 > n1){
-    //     return -1
-    // } else {
-    //     return 0;
-    // }
+// function compareNumbersAscending(n1, n2){
+//     // if (n1 > n2) {
+//     //     return 1;
+//     // } else if(n2 > n1){
+//     //     return -1
+//     // } else {
+//     //     return 0;
+//     // }
 
-    return n1 - n2;
-}
+//     return n1 - n2;
+// }
 
-function compareNumbersDescending(n1, n2){
-    return n2 - n1;
-}
+// function compareNumbersDescending(n1, n2){
+//     return n2 - n1;
+// }
 
-function compareStringsAscending(s1, s2){
-    return s1.localeCompare(s2);
-}
+// function compareStringsAscending(s1, s2){
+//     return s1.localeCompare(s2);
+// }
 
-function compareStringsDescending(s1, s2){
-    // return -s1.localeCompare(s2);
-    return s2.localeCompare(s1);
-}
+// function compareStringsDescending(s1, s2){
+//     // return -s1.localeCompare(s2);
+//     return s2.localeCompare(s1);
+// }
 
-numbers.sort(compareNumbersDescending);
+// numbers.sort(compareNumbersDescending);
 
-console.log(numbers)
+// console.log(numbers)
 
-students.sort(compareStringsDescending);
+// students.sort(compareStringsDescending);
 
-console.log(students);
+// console.log(students);
 
 
-const cars = [
-    {
-        model: "g-wagon",
-        producer: "mercedes",
-        maxSpeed: 180
-    },
-    {
-        model: "cla",
-        producer: "mercedes",
-        maxSpeed: 225
-    },
-    {
-        model: "panda",
-        producer: "fiat",
-        maxSpeed: 150
-    },
-    {
-        model: "bravo",
-        producer: "fiat",
-        maxSpeed: 180
-    },
-    {
-        model: "a4",
-        producer: "audi",
-        maxSpeed: 225
-    }
-]
+// const cars = [
+//     {
+//         model: "g-wagon",
+//         producer: "mercedes",
+//         maxSpeed: 180
+//     },
+//     {
+//         model: "cla",
+//         producer: "mercedes",
+//         maxSpeed: 225
+//     },
+//     {
+//         model: "panda",
+//         producer: "fiat",
+//         maxSpeed: 150
+//     },
+//     {
+//         model: "bravo",
+//         producer: "fiat",
+//         maxSpeed: 180
+//     },
+//     {
+//         model: "a4",
+//         producer: "audi",
+//         maxSpeed: 225
+//     }
+// ]
 
-function compareCarsBySpeedDescending(car1, car2) {
-    return car2.maxSpeed - car1.maxSpeed;
-}
+// function compareCarsBySpeedDescending(car1, car2) {
+//     return car2.maxSpeed - car1.maxSpeed;
+// }
 
-function compareCarsByModelAscending(car1, car2) {
-    return car1.model.localeCompare(car2.model);
-}
+// function compareCarsByModelAscending(car1, car2) {
+//     return car1.model.localeCompare(car2.model);
+// }
 
-function compareCarsBySpeedDescendingAndModelAscending(car1, car2) {
-    if(car1.maxSpeed > car2.maxSpeed){
-        return -1;
-    } else if (car2.maxSpeed > car1.maxSpeed){
-        return 1;
-    } else {
-        return car1.model.localeCompare(car2.model);
-    }
-}
+// function compareCarsBySpeedDescendingAndModelAscending(car1, car2) {
+//     if(car1.maxSpeed > car2.maxSpeed){
+//         return -1;
+//     } else if (car2.maxSpeed > car1.maxSpeed){
+//         return 1;
+//     } else {
+//         return car1.model.localeCompare(car2.model);
+//     }
+// }
 
-cars.sort(compareCarsBySpeedDescendingAndModelAscending);
+// cars.sort(compareCarsBySpeedDescendingAndModelAscending);
 
-console.log(cars);
+// console.log(cars);
+
+
+// SORTING NOT IN PLACE
+
+// const numbers = [200, 2, -20, 12, 5, 1000];
+
+// // const doubleNumbers = numbers.map((n) => n * 2);
+
+// // console.log(doubleNumbers);
+// // console.log(numbers);
+
+// // const sortedNumbers = numbers.sort((n1, n2) => n1 - n2);
+
+// // console.log(sortedNumbers);
+// // console.log(numbers);
+
+// function correctSort(array, compareFn){
+
+//     const clone = [...array];
+//     //const clone = new Array(...array);
+//     //const clone = Array.from(array);
+
+//     clone.sort(compareFn);
+
+//     return clone;
+// }
+
+// const sortedNumbers = correctSort(numbers, (n1, n2) => n1 - n2);
+
+// console.log(sortedNumbers);
+// console.log(numbers);
